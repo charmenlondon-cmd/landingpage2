@@ -7,13 +7,14 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Zap, RefreshCw, Clock, AlertTriangle } from "lucide-react";
+import { Check } from "lucide-react";
 
 const outcomes = [
-  { icon: Zap, text: "Repetitive tasks become self-executing." },
-  { icon: RefreshCw, text: "Follow-ups trigger automatically." },
-  { icon: Clock, text: "Information updates in real time." },
-  { icon: AlertTriangle, text: "Exceptions are surfaced early, not discovered late." },
+  { text: "Follow-ups trigger without reminders" },
+  { text: "Information updates across systems automatically" },
+  { text: "Repetitive admin disappears" },
+  { text: "Exceptions surface early — not weeks later" },
+  { text: "You stop babysitting process" },
 ];
 
 export default function SolutionSection() {
@@ -46,71 +47,57 @@ export default function SolutionSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#F7F5F3] leading-[1.15] mb-14"
+          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#F7F5F3] leading-[1.15] mb-8"
         >
-          We Redesign the{" "}
-          <span className="text-[#C87941] italic">Mechanics</span>{" "}
-          Behind Your Business.
+          What I Do
         </motion.h2>
 
-        {/* Body copy — Charl's text */}
-        <motion.div
+        {/* Body copy */}
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-6 text-[#F7F5F3]/65 text-base sm:text-lg leading-relaxed font-light mb-16"
+          className="text-[#F7F5F3]/75 text-lg sm:text-xl leading-relaxed mb-10"
         >
-          <p>
-            Together, we identify where time and effort are being lost. Then I take over,
-            simplifying and systemising workflows so routine tasks run quietly in the background —
-            freeing your team to focus on higher-value decisions.
-          </p>
-          <p>
-            Through automation, intelligent system integration, and practical AI implementation,
-            necessary work becomes structured, trackable, and largely self-managing —{" "}
-            <span className="text-[#F7F5F3]/90 font-medium">
-              repetition handled by technology, judgment handled by people.
-            </span>
-          </p>
-          <p>
-            We start by examining how work actually flows across your organisation: how tasks are
-            triggered, how information moves, where things stall, and where manual intervention
-            quietly compensates for weak structure. From there, we redesign workflows and introduce
-            automation and AI deliberately — only where they meaningfully improve execution.
-          </p>
-          <p>
-            That means defining clear triggers and embedding the right logic into your workflows,
-            allowing routine actions to execute automatically and at scale. With that structure in
-            place, operational capacity expands without constant oversight.
-          </p>
-        </motion.div>
+          I redesign how work flows through your business so routine tasks execute automatically and reliably.
+        </motion.p>
+
+        {/* That means section */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="font-display text-2xl text-[#C87941] mb-6"
+        >
+          That means:
+        </motion.p>
 
         {/* Outcome bullets */}
-        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-14">
+        <div className="space-y-4 mb-14">
           {outcomes.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
-              className="flex items-start gap-4 p-5 rounded-lg bg-[#F7F5F3]/[0.03] border border-[#C87941]/10 hover:border-[#C87941]/25 transition-colors duration-300"
+              className="flex items-start gap-4"
             >
-              <item.icon className="w-5 h-5 text-[#C87941] mt-0.5 shrink-0" />
-              <p className="font-body text-[#F7F5F3]/80 text-base">{item.text}</p>
+              <Check className="w-6 h-6 text-[#C87941] mt-0.5 shrink-0" />
+              <p className="font-body text-[#F7F5F3]/80 text-lg">{item.text}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Closing statement — Charl's copy */}
+        {/* Closing statement */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="font-display text-xl sm:text-2xl text-[#F7F5F3]/80 italic leading-relaxed text-center max-w-3xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.9 }}
+          className="font-display text-xl sm:text-2xl text-[#F7F5F3]/80 leading-relaxed max-w-2xl"
         >
-          The result is a business that runs with greater clarity and less intervention — where
-          technology supports execution, and your team focuses on{" "}
-          <span className="text-[#C87941]">decisions, relationships, and strategy.</span>
+          You don't need more tools.
+          <br />
+          <span className="text-[#C87941] italic">You need better wiring between the ones you already use.</span>
         </motion.p>
       </div>
     </section>

@@ -8,26 +8,26 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { IMAGES } from "@/lib/images";
-import { Search, MessageSquare, Rocket } from "lucide-react";
+import { Search, Wrench, CheckCircle } from "lucide-react";
 
 const steps = [
   {
     icon: Search,
     number: "01",
-    title: "Assess",
-    description: "We briefly assess your current operational landscape and identify key areas for improvement.",
+    title: "Diagnose",
+    description: "We identify where time is leaking and which tasks are ideal for automation.",
   },
   {
-    icon: MessageSquare,
+    icon: Wrench,
     number: "02",
-    title: "Discuss",
-    description: "We discuss the immediate impact that targeted automations could have on your business.",
+    title: "Design & Build",
+    description: "I design and implement the workflows — including AI where it actually helps.",
   },
   {
-    icon: Rocket,
+    icon: CheckCircle,
     number: "03",
-    title: "Outline",
-    description: "We outline a potential roadmap to leverage AI and strategic systems for sustained growth.",
+    title: "Test & Hand Over",
+    description: "We test everything, refine edge cases, and ensure the system runs quietly in the background.",
   },
 ];
 
@@ -63,9 +63,9 @@ export default function StrategyCallSection() {
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="font-accent text-xs tracking-[0.3em] uppercase text-[#C87941]/60 mb-8"
+          className="font-accent text-xs tracking-[0.3em] uppercase text-[#C87941]/60 mb-12"
         >
-          // Let's Talk
+          // How It Works
         </motion.p>
 
         {/* Headline */}
@@ -73,29 +73,10 @@ export default function StrategyCallSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#F7F5F3] leading-[1.15] mb-4"
+          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#F7F5F3] leading-[1.15] mb-14"
         >
-          Ready to Build Your
+          How It Works
         </motion.h2>
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#C87941] italic leading-[1.15] mb-8"
-        >
-          Efficient Future?
-        </motion.h2>
-
-        {/* Sub-headline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="font-body text-lg sm:text-xl text-[#F7F5F3]/60 max-w-2xl mx-auto mb-14 font-light"
-        >
-          Your business has unique challenges and untapped potential. A quick, focused conversation
-          can reveal how strategic automation and AI can redefine your operations.
-        </motion.p>
 
         {/* Three steps */}
         <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 mb-14 max-w-4xl mx-auto">
@@ -123,11 +104,21 @@ export default function StrategyCallSection() {
           ))}
         </div>
 
+        {/* Timeline note */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="font-body text-lg text-[#F7F5F3]/70 mb-14"
+        >
+          Most clients reclaim meaningful time within 30 days.
+        </motion.p>
+
         {/* Copper divider */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={isInView ? { scaleX: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
           className="w-24 h-[1px] bg-[#C87941]/40 mx-auto mb-10"
         />
 
@@ -135,8 +126,19 @@ export default function StrategyCallSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
         >
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="font-display text-2xl sm:text-3xl font-bold text-[#F7F5F3] mb-6"
+          >
+            Ready to Get That Time Back?
+          </motion.h3>
+          <p className="font-body text-lg text-[#F7F5F3]/60 mb-6">
+            Let's identify the fastest automation wins in your business.
+          </p>
           <p className="font-body text-sm text-[#F7F5F3]/40 mb-4 uppercase tracking-wider">
             Free &middot; 15 Minutes &middot; No Obligation
           </p>
@@ -146,11 +148,8 @@ export default function StrategyCallSection() {
             rel="noopener noreferrer"
             className="inline-block font-accent text-lg font-semibold px-10 py-5 bg-[#C87941] text-[#0D1B2A] rounded hover:bg-[#d4894f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C87941]/25 hover:-translate-y-0.5"
           >
-            Book Your FREE Strategy Call Now
+            Book Your Automation Assessment
           </a>
-          <p className="font-body text-xs text-[#F7F5F3]/30 mt-4">
-            This isn't a sales pitch. It's a valuable, no-obligation opportunity to gain clarity.
-          </p>
         </motion.div>
       </div>
     </section>

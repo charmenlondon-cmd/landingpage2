@@ -1,17 +1,16 @@
 /*
  * Design: "Dark Forge" — Dramatic Contrast Storytelling
- * Home Page: Assembles all sections in narrative order.
- * Full-page dark navy canvas. Cinematic scroll experience.
+ * Home Page: Ad-specific landing page for automation services.
+ * Focused conversion path: Pain → Relief → Action
+ * Full-page dark navy canvas. Fast-scanning, single CTA.
  */
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
-import LeadMagnetSection from "@/components/LeadMagnetSection";
-import AboutSection from "@/components/AboutSection";
 import StrategyCallSection from "@/components/StrategyCallSection";
-import FaqSection from "@/components/FaqSection";
+import WhoItsForSection from "@/components/WhoItsForSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -22,10 +21,8 @@ export default function Home() {
         <HeroSection />
         <ProblemSection />
         <SolutionSection />
-        <LeadMagnetSection />
-        <AboutSection />
         <StrategyCallSection />
-        <FaqSection />
+        <WhoItsForSection />
       </main>
       <Footer />
     </div>
