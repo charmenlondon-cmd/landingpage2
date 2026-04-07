@@ -27,31 +27,30 @@ export default function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-[#F7F5F3] mb-6"
+          className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-[#F7F5F3] mb-4"
         >
-          Ready to Transform Your{" "}
-          <span className="text-[#C87941] italic">Operations?</span>
+          Ready to Get That Time Back?
         </motion.h3>
-        <motion.div
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="font-body text-lg text-[#F7F5F3]/60 mb-8 max-w-2xl mx-auto"
+        >
+          Let's identify the fastest automation wins in your business.
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           <a
             href="https://calendly.com/bisonblu-info/15-minute-automation-exploration-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-accent text-base font-semibold px-8 py-4 bg-[#C87941] text-[#0D1B2A] rounded hover:bg-[#d4894f] transition-all duration-300 hover:shadow-lg hover:shadow-[#C87941]/25"
+            className="inline-block font-accent text-base font-semibold px-10 py-4 bg-[#C87941] text-[#0D1B2A] rounded hover:bg-[#d4894f] transition-all duration-300 hover:shadow-lg hover:shadow-[#C87941]/25"
           >
-            Book Your FREE Strategy Call
-          </a>
-          <a
-            href="#lead-magnet"
-            onClick={(e) => handleNavClick(e, "#lead-magnet")}
-            className="font-accent text-sm font-medium text-[#C87941]/70 hover:text-[#C87941] transition-colors duration-300"
-          >
-            Or get the free guide first &rarr;
+            Book Your Automation Assessment
           </a>
         </motion.div>
       </div>
